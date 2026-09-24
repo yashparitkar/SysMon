@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-12-10T20:34:09+05:30
+
+====== 3.3.3 Programming ======
+Created Tuesday 10 December 2024
+
+Raspberry Pi Pico can be used as a SWD programmer with debugger. Read page number 19 for more information.

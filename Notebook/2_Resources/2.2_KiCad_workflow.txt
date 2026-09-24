@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-12-05T12:03:57+05:30
+
+====== 2.2 KiCad workflow ======
+Created Thursday 05 December 2024
+
+{{./pasted_image.png?width=900}}

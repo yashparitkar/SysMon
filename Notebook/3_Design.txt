@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-28T02:04:09+05:30
+
+====== 3 Design ======
+Created Thursday 28 November 2024
+

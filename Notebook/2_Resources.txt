@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-24T23:56:29+05:30
+
+====== 2 Resources ======
+Created Sunday 24 November 2024
+
+This section containg all resources used for the project.

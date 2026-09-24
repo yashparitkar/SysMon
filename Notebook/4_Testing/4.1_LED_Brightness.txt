@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-12-04T10:37:47+05:30
+
+====== 4.1 LED Brightness ======
+Created Wednesday 04 December 2024
+
+The LED are bright-enough even at 5 mA continuous.
+Accounting for the array scanning delay, design at 15mA peak for all is possible for worst case condition which would mean a total of 2.19 W
+While running, we can expect only 740.52 mW.
+
+Testing setup:
+{{./pasted_image002.png?width=400}}
+
+Individual LED testing results:
+{{./pasted_image003.png?width=400}}{{./pasted_image004.png?width=400}}
+{{./pasted_image005.png?width=400}}{{./pasted_image006.png?width=400}}{{./pasted_image007.png?width=400}}

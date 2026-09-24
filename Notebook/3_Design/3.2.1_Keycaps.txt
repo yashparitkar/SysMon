@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-28T02:24:18+05:30
+
+====== 3.2.1 Keycaps ======
+Created Thursday 28 November 2024
+
+SLA print
+Dual nozzle 3d printer...keys ek colour se print karwa, aur letters alag colour se
+
+One more method:
+3D printed + coloured emboss letter + vinyl wrap
+
+[[./Cherry Specifications Sheet.pdf]]
+
+Found this CADs for Keycaps: https://github.com/dankwookiee/Kieeboard
+Thanks you dankwoodie!
+
+Row 3 and row 4 will be best suited.
+
+Will pocket the shapes of the symbols and print the keys.
+
+Epoxy https://www.youtube.com/watch?v=2RHdFKCa0yk&t=157s

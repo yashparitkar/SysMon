@@ -1,0 +1,77 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-28T02:05:11+05:30
+
+====== 3.1 Component Listing ======
+Created Thursday 28 November 2024
+
+===== Microprocessor: STM32L412C8T6 =====
+Datasheet: [[../../3_Components/STM32L412C8T6.pdf]]
+https://in.element14.com/stmicroelectronics/stm32l412c8t6/mcu-32bit-80mhz/dp/3011629
+
+===== USB Hub controller: TI TUSB2036 =====
+Datasheet: [[../../3_Components/tusb2036.pdf]]
+element14: https://in.element14.com/texas-instruments/tusb2036vf/ic-usb-hub-2-3-port-32lqfp/dp/3124919
+Cheaper on Electronicscomp: https://www.electronicscomp.com/tusb2036vf-texas-instruments-tusb2036vf-usb-interface-usb-hub-controller-usb-20-3-v-36-v-lqfp-32-pins?search=TUSB2036
+Robu: https://robu.in/product/tusb2036vf-texas-instruments-tusb2036vf-usb-interface-usb-hub-controller-usb-2-0-3-v-3-6-v-lqfp-32-pins/
+
+===== Transistors =====
+==== PMOS: ====
+https://in.element14.com/toshiba/ssm3j35mfv-l3f-t/mosfet-p-channel-20v-0-1a-sot/dp/4415907 100 mA ₹8.33
+
+==== NMOS: ====
+https://in.element14.com/diodes-inc/dmn65d8l-7/mosfet-n-ch-20v-sot-23-3/dp/2543546 310 mA ₹5.8
+https://in.element14.com/diodes-inc/dmn2310u-7/mosfet-n-ch-20v-1-6a-150deg-c/dp/3405174 1.5 A ₹7.3
+
+===== Switches =====
+https://stackskb.com/store/ttc-low-profile-red-switch-linear/ Low profile ₹180/10
+**Ordered** from Cosmic byte
+https://www.thecosmicbyte.com/product/gateron-mechanical-switches-compatible-with-cosmic-byte-hot-swappable-keyboards-qty-1pc/?attribute_pa_switch-type=blue-switch
+Datasheet: [[./Gater	on_blue.pdf]]
+
+===== Keycaps =====
+Can do SLA
+Robu does offer SLA printing
+https://robu.in/product/sla-3d-printing/
+
+===== Rotary sound knob: =====
+ADC is the only feasible option, designing of hall based will be a challange in itself
+https://robu.in/product/potentiometer-knob-rotary-switch-cap-black-color-pack-of-5-pcs/  @ ₹30/5, fits with any knobs
+Mechanical rotary switch: https://robu.in/product/rts-01-1p-20vp-1-pole-plastic-rotary-switch-20mm-18-teeth/, we will go with this
+Datasheet: [[./Rotary-switch.pdf]]
+
+
+===== LEDs and biasing resistor =====
+Can ask in Visha/Robu
+
+===== Frosted Acrylic =====
+To diffuse the LED lights
+https://www.amazon.in/BIGMALL-Frosted-Acrylic-Plexiglass-Projects/dp/B074ZCKVBN
+
+===== Protection diodes =====
+TVS: 6V8  https://vishaworld.com/products/p6ke6-8ca-diode?_pos=2&_sid=fab53b59d&_ss=r
+IN4730: 3V9 Schottky for 3V3 line
+https://in.element14.com/texas-instruments/tpd4e05u06dqar/diode-esd-protection-5-5v-0-5pf/dp/3116511
+
+Can use PMOS for reverse polarity protection
+
+===== DC/DC Converter =====
+https://robu.in/product/mini-360-step-down-buck-converter-power-module/ @ ₹27, 1.8 A max 
+
+TPS54260: https://robu.in/product/tps54260dgqr-texas-instruments-inc-buck-switching-regulator-ic-positive-adjustable-0-8v-1-output-2-5a-10-powertfsop-10-msop/
+TPS40200: https://in.element14.com/texas-instruments/tps40200gdr/controller-voltage-mode-0-2a-8so/dp/3123733RL
+
+===== DC 5V adapter backup incase USB cant supply =====
+Already have one with jack
+//It can supply, our assumption that we will need to push 20 mA is wrong, even 4 mA is enough. We will design for 5 mA//
+
+===== Can use this USB-C 6 pin for easier power input =====
+https://robu.in/product/usb-3-1-type-c-6-pin-for-power-charging-reversible-connector-pack-of-5/
+
+===== USB Connectors =====
+Downstream USB-A for HUB: https://robu.in/product/amphenol-usb-connector-usb-type-a-usb-2-0-receptacle-4-ways-pcb-mount/
+Datasheet: [[./USB.pdf]]
+
+Upstream connection USB-C to PC: [[https://robu.in/product/usb-type-c-breakout-board-downstream-connect	ion/]]
+
+

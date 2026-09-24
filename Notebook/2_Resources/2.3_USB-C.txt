@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-12-05T20:19:02+05:30
+
+====== 2.3 USB-C ======
+Created Thursday 05 December 2024
+
+USB-C specifications:    [[./USB Type-C Spec R2.0 - August 2019.pdf]]
+USB-C PD specifications: [[./USB_PD_R2_0 V1.3 - 20170112.pdf]]
+
+===== USB-C CC and Power =====
+
+CC pin is used to determine the flip of the cable.
+{{./pasted_image.png?width=600}}
+
+In addition to the cable orientation, the Rp-Rd path is used as a way of communicating information about the source current capabilities. To this end, the power consumer (UFP) monitors the voltage on the CC line. When the voltage on the CC line has its lowest value (about 0.41 V), the source can provide the default USB power which is 500 mA and 900 mA for the USB 2.0 and USB 3.0 respectively. When the CC line voltage is about 0.92 V, the source can provide a current of 1.5 A. The highest CC line voltage which is about 1.68 V corresponds to the source current capability of 3 A.
+
+Can be incorporated in the project so that the PCB can also supply higher current devices.
+
+https://www.allaboutcircuits.com/technical-articles/introduction-to-usb-type-c-which-pins-power-delivery-data-transfer/
+
+The two 5.1K resistors on the CC1 pins indicate to the upstream port to provide 5V and up to 1.5A (whether the upstream can supply that much current depends on what you’re connecting to)
+

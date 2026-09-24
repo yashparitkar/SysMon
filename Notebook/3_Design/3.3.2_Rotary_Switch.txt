@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-12-05T17:12:10+05:30
+
+====== 3.3.2 Rotary Switch ======
+Created Thursday 05 December 2024
+
+{{./pasted_image.png?width=500}}
+We can short to obtain 3 pairs of three switches and get rotation direction with help of A->B->C or A<-B<-C 
+
+Okay, this idea failed, these are not full rotation switches.
+
+Got this from Lamington sound shop. This is what I want.
+{{~/Downloads/20241225_112548.jpg?width=500}}
+Internal connections: 
+{{./pasted_image001.png?width=500}}
+Functioning: https://www.circuitbasics.com/how-to-setup-and-program-rotary-encoders-on-the-arduino/

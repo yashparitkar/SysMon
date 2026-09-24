@@ -1,0 +1,11 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-29T22:38:08+05:30
+
+====== 3 Outer Covering ======
+Created Friday 29 November 2024
+
+The front face should be slanted at 60^{0} from the ground
+Dimensions:
+Front face: 15 cm * 8 cm
+-> Outer covering of box ↔ PCB = 11mm

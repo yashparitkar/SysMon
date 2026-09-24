@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-29T22:38:16+05:30
+
+====== 3.4 PCB Schematics Design Notes ======
+Created Friday 29 November 2024
+
+- Switch footprint and CAD obtained
+- The switches are normally open
+- Switches can not fit on perfboard
+
+===== STM32 =====
+==== Power supply scheme ====
+{{./pasted_image.png}}
+{{./pasted_image002.png?width=500}}l{{./pasted_image005.png?width=500}}
+{{./pasted_image003.png?width=500}}{{./pasted_image004.png?width=500}}

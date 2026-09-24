@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-12-02T16:11:02+05:30
+
+====== 3.5 Power Budget ======
+Created Monday 02 December 2024
+
+Consumption = 3.3V×(33×20mA x 0.33 (array scanning factor)  [LEDs] + 28uA/MHz ×16 MHz [uC]  + 5mA [HUB]) = 758.49 mW
+
+Major component = LED = 740.52 mW
+
+Can try reducing the LED current to 15 mA, let us check brightness first
+{{./pasted_image.png?width=400}}
+{{./pasted_image001.png?width=400}}
+
+Laptop USB max = 5V  x 500mA = 2.5 W
+DC supply max = 5V x 1A = 5 W
+
+Check LED current consumption, 0805 and all are bright even with 5 mA

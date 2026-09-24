@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2024-11-24T23:56:00+05:30
+
+====== 1 Home ======
+
+====== Name: SysMon ======
+
+Created Sunday 24 November 2024
+{{./sysmon.jpg?width=800}}
+===== Suggestions: =====
+1. Change the blue LEDs to the dark green
+2. If additional power is not connected, the LEDs will not light up
+3. Maybe replace the module for the custom DC/DC converter
+==== = ====
+==== Work update: ====
+The 0805 diodes are not really 0805, they have additional pins
+Do not put SMD passives too close side by side, the tweezer also needs some space
+Alwaysa check through hole diameter
