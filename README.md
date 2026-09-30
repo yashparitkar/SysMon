@@ -7,11 +7,13 @@ The project is ongoing.
 
 ![CAD Image](Images/CAD_final.png)
 
+```text
 .
 ├── CAD: Contains all the CADs related to the project
 ├── PCB: Contains the PCB files
 ├── Software: Software used in this project
 └── USB-C_dim_xtracn: An overkill exercise to obtain the correct placement of the holes of the USB-C module
+```
 
 
 ## Progress
