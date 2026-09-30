@@ -1,4 +1,4 @@
-# KiCad ########################################################################
+t KiCad ########################################################################
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
 
@@ -48,7 +48,9 @@ Release/
 *.svd
 
 # STM32Cube generated (keep your edits, ignore generated)
-Middlewares/
+Middlewares/*
+!Middlewares/Third_Party
+!Middlewares/Third_Party/*
 Drivers/
 
 # IDE metadata
