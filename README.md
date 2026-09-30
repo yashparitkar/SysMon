@@ -11,6 +11,7 @@ The project is ongoing.
 .
 ├── CAD: Contains all the CADs related to the project
 ├── PCB: Contains the PCB files
+├── Notebook: Zim notebook of the project
 ├── Software: Software used in this project
 └── USB-C_dim_xtracn: An overkill exercise to obtain the correct placement of the holes of the USB-C module
 ```
