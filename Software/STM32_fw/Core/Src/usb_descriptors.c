@@ -34,6 +34,8 @@
 // Not needed inside the STM
 //#include "bsp/board_api.h"
 
+#include <stdio.h>
+#include "stm32l4xx_hal.h"
 #include "tusb.h"
 #include "usb_descriptors.h"
 
@@ -240,8 +242,17 @@ uint16_t const *tud_descriptor_string_cb(uint8_t index, uint16_t langid) {
       break;
 
     case STRID_SERIAL:
-      chr_count = board_usb_get_serial(_desc_str + 1, 32);
-      break;
+    {
+      uint32_t uid0 = HAL_GetUIDw0();
+      uint32_t uid2 = HAL_GetUIDw2();
+      char serial_buf[17];
+      snprintf(serial_buf, sizeof(serial_buf), "%08X%08X", (unsigned int)uid0, (unsigned int)uid2);
+      chr_count = strlen(serial_buf);
+      for (size_t i = 0; i < chr_count; i++) {
+        _desc_str[1 + i] = serial_buf[i];
+      }
+    }
+    break;
 
     default:
       // Note: the 0xEE index string is a Microsoft OS 1.0 Descriptors.

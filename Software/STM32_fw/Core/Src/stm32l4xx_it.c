@@ -22,6 +22,7 @@
 #include "stm32l4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "tusb.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -206,9 +207,9 @@ void USB_IRQHandler(void)
   /* USER CODE BEGIN USB_IRQn 0 */
 
   /* USER CODE END USB_IRQn 0 */
-  HAL_PCD_IRQHandler(&hpcd_USB_FS);
   /* USER CODE BEGIN USB_IRQn 1 */
-
+  // Route the interrupt directly to TinyUSB's native STM32 FSDEV driver
+    tud_int_handler(0);
   /* USER CODE END USB_IRQn 1 */
 }
 
