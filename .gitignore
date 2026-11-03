@@ -78,3 +78,7 @@ venv/
 
 # Zim Notebook #################################################################
 Notebook/5_Cost*
+
+# Temporary files
+*.tmp
+*.swp

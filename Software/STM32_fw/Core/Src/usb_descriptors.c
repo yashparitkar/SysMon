@@ -1,7 +1,7 @@
 /*
  * File: usb_descriptors.c
  * Author: Yash Paritkar
- * Last Modified: 2026-09-30 Wed 23:54
+ * Last Modified: 2026-11-02 Mon 23:00
  * 
  * Description: USB descriptors for the SysMon project using TinyUSB stack on STM32L4 MCU
 */
@@ -31,12 +31,14 @@
  *
  */
 
-#include "bsp/board_api.h"
+// Not needed inside the STM
+//#include "bsp/board_api.h"
+
 #include "tusb.h"
 #include "usb_descriptors.h"
 
 // Unique PID per example: guarantees re-enumeration on re-flash and a fresh host driver match.
-#define USB_PID           0x4007
+#define USB_PID   0x4007
 
 #define USB_VID   0xCafe
 #define USB_BCD   0x0200
@@ -71,6 +73,28 @@ static tusb_desc_device_t const desc_device = {
 // Application return pointer to descriptor
 uint8_t const *tud_descriptor_device_cb(void) {
   return (uint8_t const *) &desc_device;
+}
+
+//--------------------------------------------------------------------+
+// HID Report Descriptor
+//--------------------------------------------------------------------+
+
+uint8_t const desc_hid_report[] =
+{
+  TUD_HID_REPORT_DESC_KEYBOARD( HID_REPORT_ID(REPORT_ID_KEYBOARD         )),
+  TUD_HID_REPORT_DESC_MOUSE   ( HID_REPORT_ID(REPORT_ID_MOUSE            )),
+  TUD_HID_REPORT_DESC_STYLUS_PEN( HID_REPORT_ID(REPORT_ID_STYLUS_PEN     )),
+  TUD_HID_REPORT_DESC_CONSUMER( HID_REPORT_ID(REPORT_ID_CONSUMER_CONTROL )),
+  TUD_HID_REPORT_DESC_GAMEPAD ( HID_REPORT_ID(REPORT_ID_GAMEPAD          ))
+};
+
+// Invoked when received GET HID REPORT DESCRIPTOR
+// Application return pointer to descriptor
+// Descriptor contents must exist long enough for transfer to complete
+uint8_t const * tud_hid_descriptor_report_cb(uint8_t instance)
+{
+  (void) instance;
+  return desc_hid_report;
 }
 
 //--------------------------------------------------------------------+
@@ -244,26 +268,21 @@ uint16_t const *tud_descriptor_string_cb(uint8_t index, uint16_t langid) {
   return _desc_str;
 }
 
-//--------------------------------------------------------------------+
-// HID Report Descriptor
-//--------------------------------------------------------------------+
-
-uint8_t const desc_hid_report[] =
-{
-  TUD_HID_REPORT_DESC_KEYBOARD( HID_REPORT_ID(REPORT_ID_KEYBOARD         )),
-  TUD_HID_REPORT_DESC_MOUSE   ( HID_REPORT_ID(REPORT_ID_MOUSE            )),
-  TUD_HID_REPORT_DESC_STYLUS_PEN( HID_REPORT_ID(REPORT_ID_STYLUS_PEN     )),
-  TUD_HID_REPORT_DESC_CONSUMER( HID_REPORT_ID(REPORT_ID_CONSUMER_CONTROL )),
-  TUD_HID_REPORT_DESC_GAMEPAD ( HID_REPORT_ID(REPORT_ID_GAMEPAD          ))
-};
-
-// Invoked when received GET HID REPORT DESCRIPTOR
-// Application return pointer to descriptor
-// Descriptor contents must exist long enough for transfer to complete
-uint8_t const * tud_hid_descriptor_report_cb(uint8_t instance)
-{
+// Invoked when received GET_REPORT control request
+uint16_t tud_hid_get_report_cb(uint8_t instance, uint8_t report_id, hid_report_type_t report_type, uint8_t* buffer, uint16_t reqlen) {
   (void) instance;
-  return desc_hid_report;
+  (void) report_id;
+  (void) report_type;
+  (void) buffer;
+  (void) reqlen;
+  return 0;
 }
 
-
+// Invoked when received SET_REPORT control request or output report on endpoint
+void tud_hid_set_report_cb(uint8_t instance, uint8_t report_id, hid_report_type_t report_type, uint8_t const* buffer, uint16_t bufsize) {
+  (void) instance;
+  (void) report_id;
+  (void) report_type;
+  (void) buffer;
+  (void) bufsize;
+}
